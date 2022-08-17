@@ -7,9 +7,9 @@ const CardComponent = () => {
                 <img src={redlipstick} className="max-h-full w-full object-cover"/>
             </div>
             <div className='mt-1 flex flex-col items-center text-sm gap-1'>
-                <div className='flex justify-center uppercase'>boujee matte liquid lipstick</div>
-                <div className='text-gray-500 capitalize'>8-hour wear + true-matte finish</div>
-                <div className='text-gray-500 capitalize'>Ush 45000</div>
+                <div className='flex justify-center uppercase'>ocean lip gloss</div>
+                <div className='text-gray-500 capitalize'>moisturizing + glossy finish</div>
+                <div className='text-gray-500 capitalize'>Ush 30000</div>
                 <div className='flex justify-center gap-2 items-center'>
                     <div className='flex'>
                         <AiFillStar></AiFillStar>

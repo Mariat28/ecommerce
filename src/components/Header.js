@@ -3,7 +3,7 @@ import { FaBars } from 'react-icons/fa'
 import { BsBag } from 'react-icons/bs';
 const Header = () => {
     return(
-        <div className="h-16 bg-black text-white flex justify-between items-center px-2 absolute inset-0">
+        <div className="h-16 z-10 bg-black text-white flex justify-between items-center px-2 absolute inset-0">
             {/* right menu  */}
             <div className=" gap-2 flex items-center w-1/2">
                 <div className='lg:hidden flex'>
@@ -11,10 +11,10 @@ const Header = () => {
                 </div>
                 <div className="2xl:text-2xl text-xl uppercase flex flex-nowrap">sassy beautie</div>
                 <div className="gap-3 items-center ml-3 lg:flex hidden">
-                    <span className="text-base uppercase text-pink-300 cursor-pointer hover:underline">lip glosses</span>
-                    <span className="text-base uppercase cursor-pointer hover:underline">lipsticks</span>
-                    <span className="text-base uppercase cursor-pointer hover:underline">best sellers</span>
-                    <span className="text-base uppercase cursor-pointer hover:underline">about</span>
+                    <span className="text-xs 2xl:text-sm uppercase text-pink-300 cursor-pointer hover:underline">lip glosses</span>
+                    <span className="text-xs 2xl:text-sm uppercase cursor-pointer hover:underline">lipsticks</span>
+                    <span className="text-xs 2xl:text-sm uppercase cursor-pointer hover:underline">best sellers</span>
+                    <span className="text-xs 2xl:text-sm uppercase cursor-pointer hover:underline">about</span>
                 </div>
             </div>
 
