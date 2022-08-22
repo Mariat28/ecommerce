@@ -21,7 +21,7 @@ const CardComponent = () => {
                     <span>(217)</span>
                 </div>
                 <div className='w-full px-2'>
-                    <button className='border border-gray-300 w-full mt-1 bg-transparent hover:bg-black hover:text-white p-3 uppercase text-xs text-gray-400'>add to cart</button>
+                    <button className='border border-gray-100 bg-pink-50 w-full mt-1 bg-transparent hover:bg-black hover:text-white p-3 uppercase text-xs text-gray-400'>add to cart</button>
                 </div>
             </div>
         </div>
