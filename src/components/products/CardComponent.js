@@ -1,11 +1,11 @@
 import redlipstick from '../../assets/images/redlipstick.jpg';
 import { AiFillStar } from 'react-icons/ai';
 const CardComponent = ({productData, onAddToCart}) => {
-    function addToCart(){
+    function addToCart  (){
         onAddToCart(productData);
     }
     return(
-        <div className="w-80 h-[450px] border border-gray-200">
+        <div className="w-80 h-[450px] border border-gray-200 shadow-sm">
             <div className="h-72 border-b w-full ">
                 <img src={productData.img} className="max-h-full w-full h-full object-cover"/>
             </div>
@@ -24,7 +24,7 @@ const CardComponent = ({productData, onAddToCart}) => {
                     <span>(217)</span>
                 </div>
                 <div className='w-full px-2'>
-                    <button type='submit' className='border border-gray-100 bg-pink-50 w-full mt-1 bg-transparent hover:bg-black hover:text-white p-3 uppercase text-xs text-gray-400' onClick={addToCart}>add to cart</button>
+                    <button type='submit' className='border border-gray-200 bg-pink-50 w-full mt-1 bg-transparent hover:bg-black hover:text-white p-3 uppercase text-xs text-gray-400' onClick={addToCart}>add to cart</button>
                 </div>
             </div>
         </div>

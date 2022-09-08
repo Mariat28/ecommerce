@@ -3,9 +3,14 @@ import { FaBars } from 'react-icons/fa'
 import { BsBag } from 'react-icons/bs';
 import { useContext } from 'react';
 import CartContext from '../store/cart-context';
-const Header = () => {
-    const ctx = useContext(CartContext);
-    console.log('rerendering', ctx.cart);
+const Header = ({onShowCart}) => {
+    const cartCtx = useContext(CartContext);
+    const cartSize = cartCtx.items.reduce((currentNumber, item) => {
+        return currentNumber + item.amount;
+    }, 0);
+    const openCartHandler = () =>{
+        onShowCart(true);
+    }
     return(
         <div className="h-16 z-10 bg-black text-white flex justify-between items-center px-2 absolute inset-0">
             {/* right menu  */}
@@ -31,8 +36,8 @@ const Header = () => {
                 <div className='flex gap-2 items-center'>
                     <AiOutlineUser className='h-5 w-5 cursor-pointer'></AiOutlineUser>
                     <div className='flex justify-end'>
-                        <BsBag className='h-5 w-5 cursor-pointer'></BsBag>
-                        <span className='text-xs -mt-2 -ml-2 rounded-full h-4 w-4 bg-pink-500 text-center'>{ctx.cart.length}</span>
+                        <BsBag className='h-5 w-5 cursor-pointer' onClick={openCartHandler}></BsBag>
+                        <span className='text-xs -mt-2 -ml-2 rounded-full h-4 w-4 bg-pink-500 text-center'>{cartSize}</span>
                     </div>
                 </div>
             </div>

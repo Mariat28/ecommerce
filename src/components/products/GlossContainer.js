@@ -4,57 +4,61 @@ import lipglossHero from '../../assets/images/heroImg2.png';
 import smokeyGloss from '../../assets/images/smokeyGloss.png'
 import peachGloss from '../../assets/images/peachGloss.png';
 import exquisiteGloss from '../../assets/images/exquisiteGloss.png';
-import { useEffect } from "react";
+import { useContext } from "react";
+import CartContext from "../../store/cart-context";
 const productsArray =[
 
     {
         name: 'smokey rose',
-        price: '45,000',
+        price: 45000,
         id: 2,
         img:smokeyGloss,
+        amount: 0,
     },
 
     {
-        name: 'orchid',
-        price: '30,000',
+        name: 'orchid princess',
+        price: 30000,
         id: 4,
         img:lipglossHero,
+        amount: 0,
 
     },
     {
         name: 'ocean girl',
-        price: '30,000',
+        price: 30000,
         id: 1,
         img: exquisiteGloss,
+        amount: 0,
     },
     {
         name: 'lovely peach',
-        price: '30,000',
+        price: 30000,
         id: 3,
         img: peachGloss,
+        amount: 0,
 
     },
     {
         name: 'The queen',
-        price: '30,000',
+        price: 30000,
         id: 5,
         img: exquisiteGloss,
-
+        amount: 0,
 
     },
     {
         name: 'Tender',
-        price: '30,000',
+        price: 30000,
         id: 6,
         img: peachGloss,
+        amount: 0,
     }
 ]
-const cartItems = [];
-const GlossContainer = ({onUpdateCart}) =>{
+const GlossContainer = () =>{
+    const cartCtx = useContext(CartContext);
     function addToCartHandler (cartItem){
-        cartItems.push(cartItem);
-        onUpdateCart(cartItems);
-        console.log('child cart items', cartItems);
+        cartCtx.addItem(cartItem); 
     }
 
     const cardItems = productsArray.map((item) => <CardComponent key={item.id} productData={item} onAddToCart={addToCartHandler}/>)
