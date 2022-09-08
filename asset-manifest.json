@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ecommerce/static/css/main.ea36b8a0.css",
+    "main.js": "/ecommerce/static/js/main.007fc8fa.js",
+    "static/js/787.918f7f61.chunk.js": "/ecommerce/static/js/787.918f7f61.chunk.js",
+    "static/media/redlipstick.jpg": "/ecommerce/static/media/redlipstick.84b86e1f8f3258753aa1.jpg",
+    "static/media/sassyheroimg.png": "/ecommerce/static/media/sassyheroimg.0da34b919c55003ef32f.png",
+    "static/media/exquisiteGloss.png": "/ecommerce/static/media/exquisiteGloss.f38981b7cea57dcaa8df.png",
+    "static/media/coverPic.png": "/ecommerce/static/media/coverPic.8cb6aad335d64d82e11f.png",
+    "static/media/heroImg2.png": "/ecommerce/static/media/heroImg2.c2bdddebc512c7fb44da.png",
+    "static/media/smokeyGloss.png": "/ecommerce/static/media/smokeyGloss.bd4936efe79171a48349.png",
+    "static/media/peachGloss.png": "/ecommerce/static/media/peachGloss.9bb486281c27095208f3.png",
+    "static/media/empty_cart.svg": "/ecommerce/static/media/empty_cart.298be8567652bc444d67c2c41254c85d.svg",
+    "index.html": "/ecommerce/index.html",
+    "main.ea36b8a0.css.map": "/ecommerce/static/css/main.ea36b8a0.css.map",
+    "main.007fc8fa.js.map": "/ecommerce/static/js/main.007fc8fa.js.map",
+    "787.918f7f61.chunk.js.map": "/ecommerce/static/js/787.918f7f61.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea36b8a0.css",
+    "static/js/main.007fc8fa.js"
+  ]
+}
