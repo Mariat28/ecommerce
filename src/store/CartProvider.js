@@ -7,7 +7,7 @@ const defaultCartState = {
 }
 const cartReducer = (state, action) =>{
     let updatedItems = [...state.items];
-    const updatedItemIndex = updatedItems.findIndex((item) => item.id === action.item.id);
+    let updatedItemIndex = updatedItems.findIndex((item) => item.id === action.item.id);
     if(action.type === 'ADD'){
         if(state.items.indexOf(action.item) === -1) {
          updatedItems = state.items.concat(action.item);
@@ -22,8 +22,8 @@ const cartReducer = (state, action) =>{
         }; 
     }
     if(action.type === 'REMOVE') {
-        updatedItemIndex = updatedItems.findIndex((item) => item.id === action.item.id);
-        const updatedTotalAmount = state.totalAmount - (action.item.price * action.item.amount);
+        // updatedItemIndex = updatedItems.findIndex((item) => item.id === action.item.id);
+        let updatedTotalAmount = state.totalAmount - (action.item.price * action.item.amount);
         updatedItems.splice(updatedItemIndex,1);
         return {
             items: updatedItems,
@@ -32,6 +32,7 @@ const cartReducer = (state, action) =>{
     }
     if(action.type === 'REDUCE') {
         const oldItemObj = updatedItems[updatedItemIndex];
+        console.log('reduced amount params', oldItemObj.amount, action.newAmount)
         const reducedAmount = oldItemObj.amount - action.newAmount;
         const updatedItemObj = {...oldItemObj, amount:action.newAmount};
         updatedItems.splice(updatedItemIndex, 1, updatedItemObj);

@@ -4,38 +4,38 @@ import {IoLogoTiktok} from 'react-icons/io5';
 import {TbWorld} from 'react-icons/tb';
 const FooterContainer = () => {
     const styles ={
-        height: 'calc(100vh - 800px)',
+        // height: 'calc(100vh - 800px)',
     };
     return(
-        <div className=" bg-black w-full mt-2 relative" style={styles}>
+        <div className=" bg-black w-full mt-0 relative" style={styles}>
             <div className="text-slate-100 uppercase font-semibold w-full flex justify-center text-xl py-2 leading-2 tracking-widest">connect with us</div>
             <div className=" w-full mt-2 border-b border-gray-50/25 pb-8">
                 <div className=" container mx-auto w-ful flex  justify-evenly flex-wrap">
                     <div className="flex flex-col text-white w-fit">
                         <div className="uppercase text-sm">@sassybeautie_</div>
                         <div className="flex gap-3 items-center mt-2 ">
-                            <BsInstagram  className='h-5 w-5'></BsInstagram>
-                            <AiFillFacebook className='h-5 w-5'></AiFillFacebook>
-                            <BsTwitter  className='h-5 w-5'></BsTwitter>
-                            <IoLogoTiktok  className='h-5 w-5'></IoLogoTiktok>
+                            <BsInstagram  className='h-4 w-4 cursor-pointer' href='https://www.instagram.com/sassybeautie_/'></BsInstagram>
+                            <AiFillFacebook className='h-4 w-4'></AiFillFacebook>
+                            <BsTwitter  className='h-4 w-4'></BsTwitter>
+                            <IoLogoTiktok  className='h-4 w-4'></IoLogoTiktok>
                         </div>
                     </div>
                     <div className="flex flex-col text-white w-fit">
                         <div className="uppercase text-sm">@sassybeautie_</div>
                         <div className="flex gap-3 items-center mt-2 ">
-                            <BsInstagram  className='h-5 w-5'></BsInstagram>
-                            <AiFillFacebook className='h-5 w-5'></AiFillFacebook>
-                            <BsTwitter  className='h-5 w-5'></BsTwitter>
-                            <IoLogoTiktok  className='h-5 w-5'></IoLogoTiktok>
+                            <BsInstagram  className='h-4 w-4'></BsInstagram>
+                            <AiFillFacebook className='h-4 w-4'></AiFillFacebook>
+                            <BsTwitter  className='h-4 w-4'></BsTwitter>
+                            <IoLogoTiktok  className='h-4 w-4'></IoLogoTiktok>
                         </div>
                     </div>
                     <div className="flex flex-col text-white w-fit">
                         <div className="uppercase text-sm">@sassybeautie_</div>
                         <div className="flex gap-3 items-center mt-2 ">
-                            <BsInstagram  className='h-5 w-5'></BsInstagram>
-                            <AiFillFacebook className='h-5 w-5'></AiFillFacebook>
-                            <BsTwitter  className='h-5 w-5'></BsTwitter>
-                            <IoLogoTiktok  className='h-5 w-5'></IoLogoTiktok>
+                            <BsInstagram  className='h-4 w-4'></BsInstagram>
+                            <AiFillFacebook className='h-4 w-4'></AiFillFacebook>
+                            <BsTwitter  className='h-4 w-4'></BsTwitter>
+                            <IoLogoTiktok  className='h-4 w-4'></IoLogoTiktok>
                         </div>
                     </div>
                 </div>
@@ -57,13 +57,13 @@ const FooterContainer = () => {
                     Made in Uganda
                 </div>
             </div>
-            <div className='w-full p-4  absolute bottom-0'>
+            <div className='w-full p-4  '>
                 <div className='grid grid-cols-2 w-full'>
-                    <div className='text-slate-400 col-span-2 lg:col-span-1 text-sm flex flex-col gap-2 justify-center  border-r border-slate-50/25'>
-                        <span>Lip glosses</span>
-                        <span>Lip sticks</span>
-                        <span>Best sellers</span>
-                        <span>About</span>
+                    <div className='text-slate-400 col-span-2 lg:col-span-1 text-sm flex lg:flex-col mb-2 gap-2 justify-center  border-r border-slate-50/25'>
+                        <span className='hover:underline cursor-pointer'>Lip glosses</span>
+                        <span className='hover:underline cursor-pointer'>Lip sticks</span>
+                        <span className='hover:underline cursor-pointer'>Best sellers</span>
+                        <span className='hover:underline cursor-pointer'>About</span>
                     </div>
                     <div className='text-slate-400 col-span-2 lg:col-span-1 text-sm flex flex-col items-start gap-2 px-2'>
                         <div className='uppercase flex justify-center text-lg text-slate-100 leading-2 tracking-wider'>

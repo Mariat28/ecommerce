@@ -45,7 +45,7 @@ const CartContainer = ({onCloseCart}) => {
                         <span>Ush {cartCtx.totalAmount}</span>
                     </div>
                     <span className="underline text-xs">Have  a promo code?</span>
-                    <button type='submit' className='border border-black  w-full mt-3 text-white bg-black hover:bg-transparent hover:text-black p-3 uppercase text-xs ' >go to checkout</button>
+                    <button type='submit' className='border border-black  w-full mt-3 text-white bg-black rounded-sm hover:bg-transparent hover:text-black p-3 uppercase text-xs ' >go to checkout</button>
                     <div className="w-full flex flex-col items-center justify-center text-gray-400 text-xs mt-3 leading-relaxed">
                         <span>We accept visa, mastercard, amex, PayPal, ApplePay.</span>
                         <span>Promotions and discounts applied at checkout.</span> 

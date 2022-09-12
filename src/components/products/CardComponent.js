@@ -1,11 +1,11 @@
 import redlipstick from '../../assets/images/redlipstick.jpg';
-import { AiFillStar } from 'react-icons/ai';
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 const CardComponent = ({productData, onAddToCart}) => {
     function addToCart  (){
         onAddToCart(productData);
     }
     return(
-        <div className="w-80 h-[450px] border border-gray-200 shadow-sm">
+        <div className="w-80 h-[450px] shadow-md">
             <div className="h-72 border-b w-full ">
                 <img src={productData.img} className="max-h-full w-full h-full object-cover"/>
             </div>
@@ -15,16 +15,16 @@ const CardComponent = ({productData, onAddToCart}) => {
                 <div className='text-gray-500 capitalize'>Ush {productData.price}</div>
                 <div className='flex justify-center gap-2 items-center'>
                     <div className='flex'>
-                        <AiFillStar></AiFillStar>
-                        <AiFillStar></AiFillStar>
-                        <AiFillStar></AiFillStar>
-                        <AiFillStar></AiFillStar>
-                        <AiFillStar></AiFillStar>
+                        {productData.reviews >= 300 && Array.from({length: 5}, ((_, i)=> <AiFillStar key={i}></AiFillStar>))}
+                        {(productData.reviews >= 100 && productData.reviews < 300)  && Array.from({length: 3}, ((_, i)=> <AiFillStar key={i}></AiFillStar>))}
+                        {productData.reviews < 100 && Array.from({length: 2}, ((_, i)=> <AiFillStar key={i}></AiFillStar>))}
+                        {productData.reviews <= 50 && Array.from({length: 3}, ((_, i)=> <AiOutlineStar key={i}></AiOutlineStar>))}
+                        {(productData.reviews >= 100 && productData.reviews < 300)  && Array.from({length: 2}, ((_, i)=> <AiOutlineStar key={i}></AiOutlineStar>))}
                     </div>
-                    <span>(217)</span>
+                    <span>({productData.reviews})</span>
                 </div>
                 <div className='w-full px-2'>
-                    <button type='submit' className='border border-gray-200 bg-pink-50 w-full mt-1 bg-transparent hover:bg-black hover:text-white p-3 uppercase text-xs text-gray-400' onClick={addToCart}>add to cart</button>
+                    <button type='submit' className='border rounded-sm border-gray-400 bg-pink-50 w-full mt-1 bg-transparent hover:bg-black hover:text-white p-3 uppercase text-xs text-gray-500' onClick={addToCart}>add to bag</button>
                 </div>
             </div>
         </div>
