@@ -36,14 +36,14 @@ function App() {
   }
   return (
     <CartProvider>
-      <div className="App relative flex flex-col overflow-hidden bg-slate-100  h-screen">
+      <div className="App relative flex flex-col overflow-hidden bg-pink-100  h-screen">
         <Header onShowCart={openCartHandler} onSearchInput = {searchHandler} onScrollToClick={scrollViewHandler}></Header>
         <div className="overflow-auto min-h-full">
           <SliderFrame></SliderFrame>
           <GlossContainer search_term={search_term} ref={shopRef}></GlossContainer>
           <ValuesContainer ref={valuesRef}></ValuesContainer>
           <FooterContainer></FooterContainer>
-          {isCartOpen && <CartContainer onCloseCart={openCartHandler}></CartContainer>}
+          {isCartOpen && <CartContainer onCloseCart={openCartHandler} onScrollToClick={scrollViewHandler}></CartContainer>}
         </div>
 
       </div>

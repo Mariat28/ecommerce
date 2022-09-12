@@ -2,9 +2,10 @@ import { useContext } from "react";
 import emptyCartIcon from '../../assets/icons/empty_cart.svg';
 import CartContext from '../../store/cart-context';
 import CartItem from './CartItem';
-const CartContainer = ({onCloseCart}) => {
+const CartContainer = ({onCloseCart, onScrollToClick}) => {
     const closeCartHandler = () =>{
         onCloseCart(false);
+        onScrollToClick('shop');
     }
     const cartCtx = useContext(CartContext);
     const cartSize = cartCtx.items.reduce((currentNumber, item) => {

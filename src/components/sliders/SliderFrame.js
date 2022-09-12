@@ -2,7 +2,7 @@
  const SliderFrame = (props) =>{
     return(
         <div className="h-[500px] relative   mt-16 flex justify-between items-center">
-            <div className='h-full w-[500px]  flex items-center px-4 gap-4 bg-gray-100 skew-x-12'>
+            <div className='h-full w-[500px]  flex items-center px-4 gap-4 bg-pink-100 skew-x-12'>
                 {/* <div>
                 <img src={lipglossHero} className="h-48 object-cover" />
                 <img src={lipstickHero} className="h-48 object-cover" />
@@ -10,7 +10,7 @@
                 </div> */}
             </div>
             <div className='absolute left-0 w-80'>
-                <img src={lipstickHero} className=" w-96 h-full object-fill" />
+                <img src={lipstickHero} className=" w-96 h-full object-cover" />
             </div>
             {/* lipgloss image as the background */}
             {/* <div className="absolute h-full min-h-full  z-10 w-full flex flex-col items-center justify-center"> */}
