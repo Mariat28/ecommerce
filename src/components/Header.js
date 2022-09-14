@@ -4,6 +4,7 @@ import { BsBag } from 'react-icons/bs';
 import { useContext, useState } from 'react';
 import CartContext from '../store/cart-context';
 const Header = ({onShowCart, onSearchInput, onScrollToClick}) => {
+    const [activeLink, setActiveLink] = useState('shop');
      const searchInputChange = (e) =>{
         onSearchInput(e.target.value);
      }
@@ -18,23 +19,26 @@ const Header = ({onShowCart, onSearchInput, onScrollToClick}) => {
         console.log(e.target.innerHTML)
         if(e.target.innerHTML === 'shop'){
             onScrollToClick('shop');
+            setActiveLink('shop');
         } else if(e.target.innerHTML === 'best sellers') {
             onScrollToClick('best sellers');
+            setActiveLink('best sellers');
         } else if(e.target.innerHTML === 'our values') {
             onScrollToClick('values');
+            setActiveLink('values');
         }
     }
     return(
-        <div className="h-16 z-10 bg-pink-300/70 shadow-sm text-white flex justify-between items-center px-2 absolute inset-0">
+        <div className="h-16 z-10 bg-pink-300/70  text-white flex justify-between items-center px-2 absolute inset-0">
             {/* right menu  */}
             <div className=" gap-2 flex items-center font-semibold">
                 <div className='lg:hidden flex'>
                     <FaBars className='h-5 w-5 text-slate-200 cursor-pointer'></FaBars>
                 </div>
                 <div className="gap-3 items-center ml-3 lg:flex hidden text-justify">
-                    <span className="text-sm 2xl:text-sm uppercase text-pink-500 cursor-pointer hover:underline" onClick={scrollToSection}>shop</span>
-                    <span className="text-sm 2xl:text-sm uppercase cursor-pointer hover:underline" onClick={scrollToSection}>best sellers</span>
-                    <span className="text-sm 2xl:text-sm uppercase cursor-pointer hover:underline" onClick={scrollToSection}>our values</span>
+                    <span className={`text-sm 2xl:text-sm uppercase  cursor-pointer  ${activeLink === 'shop' ? "text-pink-500 underline" : ''}`} onClick={scrollToSection}>shop</span>
+                    <span className={`text-sm 2xl:text-sm uppercase  cursor-pointer  ${activeLink === 'best sellers' ? "text-pink-500 underline" : ''}`} onClick={scrollToSection}>best sellers</span>
+                    <span className={`text-sm 2xl:text-sm uppercase  cursor-pointer  ${activeLink === 'values' ? "text-pink-500 underline" : ''}`} onClick={scrollToSection}>our values</span>
                     <span className="text-sm 2xl:text-sm uppercase cursor-pointer hover:underline" onClick={scrollToSection}>get in touch</span>
                 </div>
             </div>
