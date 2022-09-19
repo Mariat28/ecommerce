@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/ecommerce-webApp-react/static/css/main.e416d829.css",
-    "main.js": "/ecommerce-webApp-react/static/js/main.560463e4.js",
+    "main.css": "/ecommerce-webApp-react/static/css/main.5ce3e720.css",
+    "main.js": "/ecommerce-webApp-react/static/js/main.806771c2.js",
     "static/js/787.918f7f61.chunk.js": "/ecommerce-webApp-react/static/js/787.918f7f61.chunk.js",
     "static/media/redlipstick.jpg": "/ecommerce-webApp-react/static/media/redlipstick.84b86e1f8f3258753aa1.jpg",
     "static/media/sassyheroimg.png": "/ecommerce-webApp-react/static/media/sassyheroimg.0da34b919c55003ef32f.png",
     "static/media/exquisiteGloss.png": "/ecommerce-webApp-react/static/media/exquisiteGloss.f38981b7cea57dcaa8df.png",
-    "static/media/maramar.png": "/ecommerce-webApp-react/static/media/maramar.28d8c769b0233064c6dc.png",
     "static/media/heroImg2.png": "/ecommerce-webApp-react/static/media/heroImg2.c2bdddebc512c7fb44da.png",
     "static/media/smokeyGloss.png": "/ecommerce-webApp-react/static/media/smokeyGloss.bd4936efe79171a48349.png",
     "static/media/peachGloss.png": "/ecommerce-webApp-react/static/media/peachGloss.9bb486281c27095208f3.png",
     "static/media/empty_cart.svg": "/ecommerce-webApp-react/static/media/empty_cart.298be8567652bc444d67c2c41254c85d.svg",
     "index.html": "/ecommerce-webApp-react/index.html",
-    "main.e416d829.css.map": "/ecommerce-webApp-react/static/css/main.e416d829.css.map",
-    "main.560463e4.js.map": "/ecommerce-webApp-react/static/js/main.560463e4.js.map",
+    "main.5ce3e720.css.map": "/ecommerce-webApp-react/static/css/main.5ce3e720.css.map",
+    "main.806771c2.js.map": "/ecommerce-webApp-react/static/js/main.806771c2.js.map",
     "787.918f7f61.chunk.js.map": "/ecommerce-webApp-react/static/js/787.918f7f61.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e416d829.css",
-    "static/js/main.560463e4.js"
+    "static/css/main.5ce3e720.css",
+    "static/js/main.806771c2.js"
   ]
 }
