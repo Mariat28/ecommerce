@@ -12,15 +12,20 @@ function App() {
   // const cartCtx = useContext(cartContext);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [search_term, setSearchTerm] = useState('');
+  const homeRef = useRef();
   const shopRef = useRef();
   const sellersRef = useRef();
   const valuesRef = useRef();
 
   const searchHandler = (search_value) => {
     setSearchTerm(search_value);
+    shopRef.current?.scrollIntoView({behavior: 'smooth'});
   }
   const scrollViewHandler = (scrollElement) =>{
     console.log('scroll to element', scrollElement, shopRef);
+    if(scrollElement === 'home'){
+      homeRef.current?.scrollIntoView({behavior: 'smooth'});
+    }
     if(scrollElement === 'shop'){
       shopRef.current?.scrollIntoView({behavior: 'smooth'});
     }
@@ -39,7 +44,7 @@ function App() {
       <div className="App relative flex flex-col overflow-hidden bg-pink-100  h-screen">
         <Header onShowCart={openCartHandler} onSearchInput = {searchHandler} onScrollToClick={scrollViewHandler}></Header>
         <div className="overflow-auto min-h-full">
-          <SliderFrame onScrollToClick={scrollViewHandler}></SliderFrame>
+          <SliderFrame onScrollToClick={scrollViewHandler} ref={homeRef}></SliderFrame>
           <GlossContainer search_term={search_term} ref={shopRef}></GlossContainer>
           <ValuesContainer ref={valuesRef}></ValuesContainer>
           <FooterContainer></FooterContainer>

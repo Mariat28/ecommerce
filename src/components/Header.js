@@ -4,7 +4,7 @@ import { BsBag } from 'react-icons/bs';
 import { useContext, useState } from 'react';
 import CartContext from '../store/cart-context';
 const Header = ({onShowCart, onSearchInput, onScrollToClick}) => {
-    const [activeLink, setActiveLink] = useState('shop');
+    const [activeLink, setActiveLink] = useState('home');
      const searchInputChange = (e) =>{
         onSearchInput(e.target.value);
      }
@@ -17,7 +17,10 @@ const Header = ({onShowCart, onSearchInput, onScrollToClick}) => {
     }
     const scrollToSection = (e) =>{
         console.log(e.target.innerHTML)
-        if(e.target.innerHTML === 'shop'){
+        if(e.target.innerHTML === 'home'){
+            onScrollToClick('home');
+            setActiveLink('home');
+        }else if(e.target.innerHTML === 'shop'){
             onScrollToClick('shop');
             setActiveLink('shop');
         } else if(e.target.innerHTML === 'best sellers') {
@@ -36,6 +39,7 @@ const Header = ({onShowCart, onSearchInput, onScrollToClick}) => {
                     <FaBars className='h-5 w-5 text-slate-200 cursor-pointer'></FaBars>
                 </div>
                 <div className="gap-3 items-center ml-3 lg:flex hidden text-justify">
+                    <span className={`text-sm 2xl:text-sm uppercase  cursor-pointer  ${activeLink === 'home' ? "text-pink-500 underline" : ''}`} onClick={scrollToSection}>home</span>
                     <span className={`text-sm 2xl:text-sm uppercase  cursor-pointer  ${activeLink === 'shop' ? "text-pink-500 underline" : ''}`} onClick={scrollToSection}>shop</span>
                     <span className={`text-sm 2xl:text-sm uppercase  cursor-pointer  ${activeLink === 'best sellers' ? "text-pink-500 underline" : ''}`} onClick={scrollToSection}>best sellers</span>
                     <span className={`text-sm 2xl:text-sm uppercase  cursor-pointer  ${activeLink === 'values' ? "text-pink-500 underline" : ''}`} onClick={scrollToSection}>our values</span>

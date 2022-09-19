@@ -53,7 +53,7 @@ const GlossContainer = forwardRef((props, ref) =>{
     const cardItems = filteredItems.map((item) => <CardComponent key={item.id} productData={item} onAddToCart={addToCartHandler} onViewProduct={showProductView}/>)
 
     return(
-        <div className="mt-0 bg-pink-100" ref={ref}>
+        <div className="mt-0 bg-pink-100 h-7/8 " ref={ref}>
             <div className="px-2 text-sm uppercase text-gray-400 flex items-center justify-between">
                 <div className="mt-1">
                     <span className={` ${isProductView ? 'text-pink-300 hover:underline cursor-pointer': ''}`} onClick={hideProductView}>lips | lip glosses </span>
@@ -68,8 +68,8 @@ const GlossContainer = forwardRef((props, ref) =>{
                 </div>}
 
             </div>
-            <div className="flex justify-center w-full" >
-                <div className="min-h-full mt-6 py-3 px-0 flex flex-wrap gap-2 justify-center container mx-auto w-full">
+            <div className="flex justify-center w-full " >
+                <div className="min-h-full mt-6 py-3 px-0 flex flex-wrap gap-2 justify-center container mx-auto  w-full">
                     {!isProductView && cardItems}
                     {cardItems.length===0 && <div className="text-gray-700">No products match your search at the moment!</div>}
                     {isProductView && <ProductView productData={currentProduct}/>}

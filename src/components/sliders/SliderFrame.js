@@ -1,10 +1,11 @@
  import lipstickHero from '../../assets/images/peachGloss.png';
- const SliderFrame = ({onScrollToClick}) =>{
+ import { forwardRef } from 'react';
+ const SliderFrame = forwardRef(({onScrollToClick}, ref) =>{
     const scrollToShop = () =>{
         onScrollToClick('shop');
     }
     return(
-        <div className="h-5/6 relative   mt-16 flex justify-between items-center rounded-b-3xl">
+        <div className=" relative h-screen   mt-16 flex justify-between items-center rounded-b-3xl" ref={ref}>
             <div className='h-full  flex items-center px-4 gap-4 bg-pink-300/70 w-3/5'>
             <img src={lipstickHero} className=" h-full object-cover" />
 
@@ -19,7 +20,7 @@
             {/* </div> */}
             {/* lipgloss image as the background */}
             {/* <div className="absolute h-full min-h-full  z-10 w-full flex flex-col items-center justify-center"> */}
-                <div className="text-2xl xl:text-5xl rounded-br-[300px] text-white px-2 flex items-center justify-center  w-full bg-pink-300/70 h-full">
+                <div className="text-2xl xl:text-5xl rounded-br-[400px] text-white px-2 flex items-center justify-center  w-full bg-pink-300/70 h-full">
                     <div className='flex flex-col'>
                         <div className="uppercase flex justify-center font-semibold">dry lip killers</div>
                         <div className="flex flex-wrap-reverse justify-end text-lg">Everything you need to create a glossy & perfect pout.</div>
@@ -33,5 +34,5 @@
 
         </div>
     )
- }
+ })
  export default SliderFrame;

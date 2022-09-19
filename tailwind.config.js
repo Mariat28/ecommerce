@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      height:{
+        '7/8' : '90%'
+      },
       animation: {
         fade: 'fadeOut 2s  ease-in-out',
       },
