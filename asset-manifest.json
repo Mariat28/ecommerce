@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ecommerce-webApp-react/static/css/main.5ce3e720.css",
-    "main.js": "/ecommerce-webApp-react/static/js/main.806771c2.js",
+    "main.css": "/ecommerce-webApp-react/static/css/main.c5565165.css",
+    "main.js": "/ecommerce-webApp-react/static/js/main.721c2d5d.js",
     "static/js/787.918f7f61.chunk.js": "/ecommerce-webApp-react/static/js/787.918f7f61.chunk.js",
     "static/media/redlipstick.jpg": "/ecommerce-webApp-react/static/media/redlipstick.84b86e1f8f3258753aa1.jpg",
     "static/media/sassyheroimg.png": "/ecommerce-webApp-react/static/media/sassyheroimg.0da34b919c55003ef32f.png",
@@ -11,12 +11,12 @@
     "static/media/peachGloss.png": "/ecommerce-webApp-react/static/media/peachGloss.9bb486281c27095208f3.png",
     "static/media/empty_cart.svg": "/ecommerce-webApp-react/static/media/empty_cart.298be8567652bc444d67c2c41254c85d.svg",
     "index.html": "/ecommerce-webApp-react/index.html",
-    "main.5ce3e720.css.map": "/ecommerce-webApp-react/static/css/main.5ce3e720.css.map",
-    "main.806771c2.js.map": "/ecommerce-webApp-react/static/js/main.806771c2.js.map",
+    "main.c5565165.css.map": "/ecommerce-webApp-react/static/css/main.c5565165.css.map",
+    "main.721c2d5d.js.map": "/ecommerce-webApp-react/static/js/main.721c2d5d.js.map",
     "787.918f7f61.chunk.js.map": "/ecommerce-webApp-react/static/js/787.918f7f61.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ce3e720.css",
-    "static/js/main.806771c2.js"
+    "static/css/main.c5565165.css",
+    "static/js/main.721c2d5d.js"
   ]
 }
