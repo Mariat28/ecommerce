@@ -1,28 +1,30 @@
- import lipstickHero from '../../assets/images/maramar.png';
+ import lipstickHero from '../../assets/images/peachGloss.png';
  const SliderFrame = ({onScrollToClick}) =>{
     const scrollToShop = () =>{
         onScrollToClick('shop');
     }
     return(
-        <div className="h-[500px] relative   mt-16 flex justify-between items-center">
-            <div className='h-full w-[500px]  flex items-center px-4 gap-4 bg-pink-100 skew-x-12'>
+        <div className="h-5/6 relative   mt-16 flex justify-between items-center rounded-b-3xl">
+            <div className='h-full  flex items-center px-4 gap-4 bg-pink-300/70 w-3/5'>
+            <img src={lipstickHero} className=" h-full object-cover" />
+
                 {/* <div>
                 <img src={lipglossHero} className="h-48 object-cover" />
                 <img src={lipstickHero} className="h-48 object-cover" />
 
                 </div> */}
             </div>
-            <div className='absolute left-0 w-80'>
-                <img src={lipstickHero} className=" w-96 h-full object-cover" />
-            </div>
+            {/* <div className='absolute left-0 w-80'> */}
+                {/* <img src={lipstickHero} className=" h-full object-cover" /> */}
+            {/* </div> */}
             {/* lipgloss image as the background */}
             {/* <div className="absolute h-full min-h-full  z-10 w-full flex flex-col items-center justify-center"> */}
-                <div className="text-2xl xl:text-3xl text-white px-2 flex items-center justify-end  w-full bg-pink-300/70 h-full">
+                <div className="text-2xl xl:text-5xl rounded-br-[300px] text-white px-2 flex items-center justify-center  w-full bg-pink-300/70 h-full">
                     <div className='flex flex-col'>
                         <div className="uppercase flex justify-center font-semibold">dry lip killers</div>
                         <div className="flex flex-wrap-reverse justify-end text-lg">Everything you need to create a glossy & perfect pout.</div>
                         <div className='flex justify-center p-2 '>
-                            <button className='uppercase text-sm shadow-md rounded-sm bg-black p-2 text-pink-300'><span className='hover:animate-pulse' onClick={scrollToShop}>shop now</span></button>
+                            <button className='uppercase text-sm ease-out duration-300 hover:font-semibold hover:bg-pink-100 shadow-md rounded-sm bg-black px-10 py-4 text-pink-300'><span className='hover:animate-pulse' onClick={scrollToShop}>shop now</span></button>
                         </div>
                     </div>
 

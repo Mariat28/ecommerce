@@ -9,7 +9,7 @@ const productsArray =[
         name: 'smokey rose',
         price: 45000,
         id: 2,
-        img:[smokeyGloss,lipglossHero],
+        img:[smokeyGloss,lipglossHero, peachGloss],
         amount: 0,
         reviews: 200,
     },

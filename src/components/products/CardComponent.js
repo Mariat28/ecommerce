@@ -22,7 +22,7 @@ const CardComponent = ({productData, onAddToCart, onViewProduct}) => {
         onViewProduct(productData);
     }
     return(
-        <div className="w-80 h-[450px] shadow-md">
+        <div className="w-80 h-[450px] shadow-md rounded-br-3xl rounded-tl-3xl">
             <div className="h-72 border-b w-full  relative" onMouseOver={mouseOverHandler} onMouseOut={mouseOutHandler}>
                 {isHover && 
                     <div className='flex bg-black/20 z-20 justify-end items-end text-white uppercase p-2 rounded-sm absolute inset-0' >

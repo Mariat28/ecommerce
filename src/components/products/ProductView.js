@@ -25,14 +25,21 @@ const ProductView = ({productData}) =>{
     return(
         <div className="h-[600px]  w-full p-2">
             <div className="grid grid-cols-2 h-full gap-2">
-                <div className="col-span-1 flex items-center justify-between border-r border-gray-100">
-                    <FaAngleLeft className={`h-6 w-6  ${currentImage === productData.img[0] ? 'text-gray-400' : 'text-gray-600 cursor-pointer'}`} disabled={currentImage === productData.img[0]} onClick={prevCounterHandler}/>
-                    <img src={currentImage} className="object-cover"/>
-                    <FaAngleRight className={`h-6 w-6  ${currentImage === productData.img[1] ? 'text-gray-400' : 'text-gray-600 cursor-pointer'}`} disabled={currentImage === productData.img[1]} onClick={nextCounterHandler}/>
-                </div>
                 <div className="col-span-1">
-                    <div className='uppercase font-semibold'>
-                        {productData.name}
+                    <div className="flex items-center justify-between border-r border-gray-200">
+                        <FaAngleLeft className={`h-6 w-6  ${currentImage === productData.img[0] ? 'text-gray-400 invisible' : 'text-gray-600 cursor-pointer'}`} disabled={currentImage === productData.img[0]} onClick={prevCounterHandler}/>
+                        <img src={currentImage} className="object-cover"/>
+                        <FaAngleRight className={`h-6 w-6  ${currentImage === productData.img[productData.img.length-1] ? 'text-gray-400 invisible' : 'text-gray-600 cursor-pointer'}`} disabled={currentImage === productData.img[productData.length - 1]} onClick={nextCounterHandler}/>
+                    </div>
+                    <div className='flex justify-center gap-1 p-2'>
+                        {productData.img.map((img, i)=> <span className={`h-3 w-3 rounded-full p-1 ${i === imageCounter ? ' bg-gray-500/20' : 'bg-transparent shadow border border-black/50'} `}></span>)}
+                    </div>
+                </div>
+
+                <div className="col-span-1">
+                    <div className='flex flex-col uppercase font-semibold tracking-wide '>
+                        <span className='text-2xl'>{productData.name} gloss drip</span>
+                        <span className='text-sm  text-gray-600'>Juicy + high shine</span>
                     </div>
                 </div>
 
