@@ -32,7 +32,7 @@ const CardComponent = ({productData, onAddToCart, onViewProduct}) => {
                         </button>
                     </div>
                 }
-                <img src={currentImage}  className={`max-h-full  w-full h-full object-cover  ${isHover? 'animate-fade' : '' }`} />
+                <img src={currentImage}  className={`max-h-full  w-full  object-cover  ${isHover? 'animate-fade' : '' }`} />
             </div>
             <div className='mt-1 flex flex-col items-center text-sm gap-1'>
                 <div className='flex justify-center uppercase'>{productData.name}</div>

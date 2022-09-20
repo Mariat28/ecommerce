@@ -37,7 +37,8 @@ const CartItem = ({cartItem}) =>{
                             <span className="capitalize text-xs text-gray-500 cursor-pointer hover:underline" onClick={removeCartItemHandler}>remove</span>
                         </div>
                         <div className='mt-1 text-gray-600'>
-                            {cartItem.amount >0 && <span className='text-sm'>Ush {productCost}</span>}
+                         <span className='text-sm'>Ush {cartItem.price}</span>
+                            {/* {cartItem.amount >0 && <span className='text-sm'>Ush {productCost}</span>} */}
                         </div>
                     </div>
 

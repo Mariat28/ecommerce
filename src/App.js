@@ -22,7 +22,6 @@ function App() {
     shopRef.current?.scrollIntoView({behavior: 'smooth'});
   }
   const scrollViewHandler = (scrollElement) =>{
-    console.log('scroll to element', scrollElement, shopRef);
     if(scrollElement === 'home'){
       homeRef.current?.scrollIntoView({behavior: 'smooth'});
     }

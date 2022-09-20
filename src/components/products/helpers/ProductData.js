@@ -12,6 +12,7 @@ const productsArray =[
         img:[smokeyGloss,lipglossHero, peachGloss],
         amount: 0,
         reviews: 200,
+        description: 'The Sassy lip gloss that feels as good as it looks. Smokey rose gloss delivers explosive shine, in seven universal shades. One luscious swipe of sassy Gloss  wand gives lips more to love, while conditioning shea butter enriches from within. Wearing this lipgloss makes lips look instantly fuller, with a non-sticky formula that’s super shiny and has an addictive peach-vanilla scent you just can’t get enough of.'
     },
 
     {
@@ -21,6 +22,7 @@ const productsArray =[
         img:[lipglossHero, smokeyGloss],
         amount: 0,
         reviews: 100,
+        description: 'The Sassy lip gloss that feels as good as it looks. orchid princess gloss delivers explosive shine, in seven universal shades. One luscious swipe of sassy Gloss  wand gives lips more to love, while conditioning shea butter enriches from within. Wearing this lipgloss makes lips look instantly fuller, with a non-sticky formula that’s super shiny and has an addictive peach-vanilla scent you just can’t get enough of.'
 
 
     },
@@ -31,6 +33,8 @@ const productsArray =[
         img: [exquisiteGloss, peachGloss],
         amount: 0,
         reviews: 50,
+        description: 'The Sassy lip gloss that feels as good as it looks. Ocean girl gloss delivers explosive shine, in seven universal shades. One luscious swipe of sassy Gloss  wand gives lips more to love, while conditioning shea butter enriches from within. Wearing this lipgloss makes lips look instantly fuller, with a non-sticky formula that’s super shiny and has an addictive peach-vanilla scent you just can’t get enough of.'
+
     },
     {
         name: 'lovely peach',
@@ -39,6 +43,8 @@ const productsArray =[
         img: [peachGloss, exquisiteGloss],
         amount: 0,
         reviews: 100,
+        description: 'The Sassy lip gloss that feels as good as it looks. Lovely peach gloss delivers explosive shine, in seven universal shades. One luscious swipe of sassy Gloss  wand gives lips more to love, while conditioning shea butter enriches from within. Wearing this lipgloss makes lips look instantly fuller, with a non-sticky formula that’s super shiny and has an addictive peach-vanilla scent you just can’t get enough of.'
+
     },
     {
         name: 'The queen',
@@ -47,6 +53,8 @@ const productsArray =[
         img: [exquisiteGloss, peachGloss],
         amount: 0,
         reviews: 20,
+        description: 'The Sassy lip gloss that feels as good as it looks. The queen gloss delivers explosive shine, in seven universal shades. One luscious swipe of sassy Gloss  wand gives lips more to love, while conditioning shea butter enriches from within. Wearing this lipgloss makes lips look instantly fuller, with a non-sticky formula that’s super shiny and has an addictive peach-vanilla scent you just can’t get enough of.'
+
     },
     {
         name: 'Tender',
@@ -55,6 +63,7 @@ const productsArray =[
         img: [peachGloss, exquisiteGloss],
         amount: 0,
         reviews: 300,
+        description: 'The Sassy lip gloss that feels as good as it looks. Tender gloss delivers explosive shine, in seven universal shades. One luscious swipe of sassy Gloss  wand gives lips more to love, while conditioning shea butter enriches from within. Wearing this lipgloss makes lips look instantly fuller, with a non-sticky formula that’s super shiny and has an addictive peach-vanilla scent you just can’t get enough of.'
     }
 ]
 export default productsArray;

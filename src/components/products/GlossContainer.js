@@ -53,13 +53,13 @@ const GlossContainer = forwardRef((props, ref) =>{
     const cardItems = filteredItems.map((item) => <CardComponent key={item.id} productData={item} onAddToCart={addToCartHandler} onViewProduct={showProductView}/>)
 
     return(
-        <div className="mt-0 bg-pink-100 h-7/8 " ref={ref}>
-            <div className="px-2 text-sm uppercase text-gray-400 flex items-center justify-between">
+        <div className="mt-0 bg-pink-100 xl:h-7/8 " >
+            <div className="px-2 mt-2 text-sm uppercase text-gray-400 flex items-center justify-between">
                 <div className="mt-1">
                     <span className={` ${isProductView ? 'text-pink-300 hover:underline cursor-pointer': ''}`} onClick={hideProductView}>lips | lip glosses </span>
                     {isProductView && <span className="text-gray-400 no-underline"> | {currentProduct.name}</span>}
                 </div>
-                { !isProductView && <div className="relative px-2">
+                { !isProductView && <div className="relative px-0">
                     <div className="bg-white flex items-center  mt-1 relative w-full">
                         <input type='text' value={filterOption.name} placeholder="sort by" className="capitalize block p-2 mt-1 outline-0  text-gray-400" onFocus={showSortItemsHandler} readOnly/>
                         <BiSort className="h-4 w-4 absolute right-0"/>
@@ -68,7 +68,7 @@ const GlossContainer = forwardRef((props, ref) =>{
                 </div>}
 
             </div>
-            <div className="flex justify-center w-full " >
+            <div className="flex justify-center w-full " ref={ref}>
                 <div className="min-h-full mt-6 py-3 px-0 flex flex-wrap gap-2 justify-center container mx-auto  w-full">
                     {!isProductView && cardItems}
                     {cardItems.length===0 && <div className="text-gray-700">No products match your search at the moment!</div>}
