@@ -1,4 +1,4 @@
-import { useContext, forwardRef, useState, useMemo, useEffect } from "react";
+import { useContext, forwardRef, useState, useMemo, useEffect, useCallback } from "react";
 import CartContext from "../../store/cart-context";
 import {BiSort} from 'react-icons/bi';
 import SortFilter from "./SortFilter";
@@ -11,8 +11,28 @@ const GlossContainer = forwardRef((props, ref) =>{
     const [filterOption, setFilterOption] = useState({name: 'ascending (A-Z)', value: 'asc'});
     const [isProductView, setIsProductView] =useState(false);
     const [currentProduct, setCurrentProduct] = useState({});
+    const [products, setProducts] = useState([]);
+    const [error, setError] = useState('');
     const cartCtx = useContext(CartContext);
 
+    const fetchProductsHandler = useCallback(async () =>{
+        setError(null);
+        try{
+            const response = await fetch('https://sassy-webapp-default-rtdb.firebaseio.com/products.json');
+            if(!response.ok) {
+                throw new Error('ooopss! an error occured');
+            }
+            const data = await response.json();
+            console.log('firebase products', data);
+            setProducts(data);
+        }catch(error){
+            setError(error.message)
+        }
+    },[]);
+    useEffect( () =>{
+        fetchProductsHandler();
+        console.log('firebase products', products);
+    }, []);
     function addToCartHandler (cartItem){
         cartCtx.addItem(cartItem); 
     }
