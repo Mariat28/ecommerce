@@ -3,31 +3,34 @@ import { FaBars } from 'react-icons/fa'
 import { BsBag } from 'react-icons/bs';
 import { useContext, useState } from 'react';
 import CartContext from '../store/cart-context';
-const Header = ({onShowCart, onSearchInput, onScrollToClick}) => {
+const Header = (props) => {
     const [activeLink, setActiveLink] = useState('home');
      const searchInputChange = (e) =>{
-        onSearchInput(e.target.value);
+        props.onSearchInput(e.target.value);
      }
     const cartCtx = useContext(CartContext);
     const cartSize = cartCtx.items.reduce((currentNumber, item) => {
         return currentNumber + item.amount;
     }, 0);
     const openCartHandler = () =>{
-        onShowCart(true);
+        props.onShowCart(true);
+    }
+    const openContactForm = () =>{
+        props.onOpenContactForm(true);
     }
     const scrollToSection = (e) =>{
         console.log(e.target.innerHTML)
         if(e.target.innerHTML === 'home'){
-            onScrollToClick('home');
+            props.onScrollToClick('home');
             setActiveLink('home');
         }else if(e.target.innerHTML === 'shop'){
-            onScrollToClick('shop');
+            props.onScrollToClick('shop');
             setActiveLink('shop');
         } else if(e.target.innerHTML === 'best sellers') {
-            onScrollToClick('best sellers');
+            props.onScrollToClick('best sellers');
             setActiveLink('best sellers');
         } else if(e.target.innerHTML === 'our values') {
-            onScrollToClick('values');
+            props.onScrollToClick('values');
             setActiveLink('values');
         }
     }
@@ -55,7 +58,7 @@ const Header = ({onShowCart, onSearchInput, onScrollToClick}) => {
                     <input type="search" placeholder="SEARCH" className='outline-0' onInput={searchInputChange}/>
                 </div>
                 <div className='flex gap-2 items-center'>
-                    <AiOutlineUser className='h-5 w-5 cursor-pointer'></AiOutlineUser>
+                    <AiOutlineUser className='h-5 w-5 cursor-pointer' onClick={openContactForm}></AiOutlineUser>
                     <div className='flex justify-end'>
                         <BsBag className='h-5 w-5 cursor-pointer' onClick={openCartHandler}></BsBag>
                         <span className='text-xs -mt-2 -ml-2 rounded-full h-5 flex items-center justify-center w-5 bg-pink-500 text-center'>{cartSize}</span>

@@ -1,8 +1,8 @@
-import redlipstick from '../../assets/images/redlipstick.jpg';
 import { AiFillStar, AiOutlineStar, AiOutlineEye } from 'react-icons/ai';
 import {useState} from 'react';
 
 const CardComponent = ({productData, onAddToCart, onViewProduct}) => {
+    console.log('product image at index 0', productData.img[0])
     const [currentImage, setCurrentImage] = useState([productData.img[0]]);
     const [isHover, setIsHover] = useState(false);
     const mouseOverHandler = (event) =>{
@@ -32,7 +32,7 @@ const CardComponent = ({productData, onAddToCart, onViewProduct}) => {
                         </button>
                     </div>
                 }
-                <img src={currentImage}  className={`max-h-full  w-full  object-cover  ${isHover? 'animate-fade' : '' }`} />
+                <img src={currentImage} alt='product'  className={`max-h-full  w-full  object-cover  ${isHover? 'animate-fade' : '' }`} />
             </div>
             <div className='mt-1 flex flex-col items-center text-sm gap-1'>
                 <div className='flex justify-center uppercase'>{productData.name}</div>

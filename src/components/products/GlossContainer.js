@@ -54,7 +54,7 @@ const GlossContainer = forwardRef((props, ref) =>{
     const { search_term } = props;
     // filter products on intial component evaluation and only if the search term changes
     const filteredItems = useMemo(() => {
-        const allProducts  = [...productsArray];
+        const allProducts  = [...products];
         if(search_term){
             return allProducts.filter((product) => product.name.toLocaleLowerCase().includes(props.search_term) || (''+product.price).toLocaleLowerCase().includes(props.search_term));
         } 

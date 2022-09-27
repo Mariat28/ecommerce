@@ -3,7 +3,8 @@ import SliderFrame from "./components/sliders/SliderFrame";
 import GlossContainer from "./components/products/GlossContainer";
 import ValuesContainer from "./components/ValuesContainer";
 import FooterContainer from "./components/footer/FooterContainer";
-import CartContainer from './components/Cart/CartContainer';
+import CartContainer from './components/cart/CartContainer';
+import ContactFormContainer from "./components/contact/ContactFormContainer";
 import CartProvider from "./store/CartProvider";
 import { useState, useRef } from "react";
 import './App.css';
@@ -11,6 +12,7 @@ import './App.css';
 function App() {
   // const cartCtx = useContext(cartContext);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const [search_term, setSearchTerm] = useState('');
   const homeRef = useRef();
   const shopRef = useRef();
@@ -38,11 +40,15 @@ function App() {
   const openCartHandler = (isOpen) =>{
     setIsCartOpen(isOpen);
   }
+  const ContactFormHandler = (isOpen) => {
+    setIsContactOpen(isOpen);
+  }
   return (
     <CartProvider>
       <div className="App relative flex flex-col overflow-hidden bg-pink-100  h-screen">
-        <Header onShowCart={openCartHandler} onSearchInput = {searchHandler} onScrollToClick={scrollViewHandler}></Header>
+        <Header onShowCart={openCartHandler} onOpenContactForm={ContactFormHandler} onSearchInput = {searchHandler} onScrollToClick={scrollViewHandler}></Header>
         <div className="overflow-auto min-h-full">
+          {isContactOpen && <ContactFormContainer onCloseform={ContactFormHandler}></ContactFormContainer>}
           <SliderFrame onScrollToClick={scrollViewHandler} ref={homeRef}></SliderFrame>
           <GlossContainer search_term={search_term} ref={shopRef}></GlossContainer>
           <ValuesContainer ref={valuesRef}></ValuesContainer>

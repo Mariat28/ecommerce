@@ -1,0 +1,15 @@
+@keyframes slideToRight {
+    from {right: 50px;}
+    to{right:40px;}
+}
+@keyframes foldup {
+    /* 0% {height: 50px;}
+    25%{height:100px;} */
+    0%{height:280px;}
+    100%{height:384px;}
+
+}
+.contact-form {
+    animation-name: slideToRight, foldup;
+    animation-duration: 0.5s, 2.5s;
+}
