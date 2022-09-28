@@ -51,11 +51,11 @@ const GlossContainer = forwardRef((props, ref) =>{
         setIsProductView(false);
         setCurrentProduct({});
     }
-    const { search_term } = props;
+    // const { search_term } = props;
     // filter products on intial component evaluation and only if the search term changes
     const filteredItems = useMemo(() => {
         const allProducts  = [...products];
-        if(search_term){
+        if(props.search_term){
             return allProducts.filter((product) => product.name.toLocaleLowerCase().includes(props.search_term) || (''+product.price).toLocaleLowerCase().includes(props.search_term));
         } 
         if(filterOption.value === 'asc'){
@@ -68,7 +68,7 @@ const GlossContainer = forwardRef((props, ref) =>{
             return allProducts.sort((a, b) => (a.price > b.price) ? 1 : -1);
         }
         return allProducts;
-    }, [search_term, filterOption]);
+    }, [props.search_term, filterOption, products]);
 
     const cardItems = filteredItems.map((item) => <CardComponent key={item.id} productData={item} onAddToCart={addToCartHandler} onViewProduct={showProductView}/>)
 

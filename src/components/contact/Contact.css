@@ -11,5 +11,5 @@
 }
 .contact-form {
     animation-name: slideToRight, foldup;
-    animation-duration: 0.5s, 2.5s;
+    animation-duration: 0.5s, 0.8s;
 }

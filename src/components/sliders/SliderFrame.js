@@ -20,7 +20,7 @@
             {/* </div> */}
             {/* lipgloss image as the background */}
             {/* <div className="absolute h-full min-h-full  z-10 w-full flex flex-col items-center justify-center"> */}
-                <div className="text-2xl xl:text-5xl xl:rounded-br-[350px] text-white px-2 flex items-center justify-center  w-full bg-pink-300/70 h-full">
+                <div className="text-2xl xl:text-5xl  text-white px-2 flex items-center justify-center  w-full bg-pink-300/70 h-full">
                     <div className='flex flex-col'>
                         <div className="uppercase flex justify-center font-semibold">dry lip killers</div>
                         <div className="flex flex-wrap-reverse justify-end text-lg">Everything you need to create a glossy & perfect pout.</div>
